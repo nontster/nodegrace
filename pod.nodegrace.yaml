@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nodegrace
+spec:
+  containers:
+  - name: nodegrace
+    image: nontster/nodegrace:1.2
+    env:
+    - name: GRACE_DELAY_SECONDS
+      value: "300"
+    resources:
+      requests:
+        memory: "64Mi"
+        cpu: "250m"
+      limits:
+        memory: "128Mi"
+        cpu: "500m"    
+    ports:
+    - name: http
+      containerPort: 8080
+    lifecycle:
+      preStop:
+        httpGet:
+          port: 8080
+          path: shutdown
+    livenessProbe:
+      httpGet:
+        path: /health
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 2
+  terminationGracePeriodSeconds: 5

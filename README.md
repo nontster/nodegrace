@@ -1,1 +1,2 @@
 # nodegrace
+Demonstrate how Kubernetes terminationGracePeriodSeconds works
