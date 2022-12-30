@@ -1,6 +1,6 @@
 -include Makefile.overrides
 
-IMAGE ?= nodegrace:1.2
+IMAGE ?= nodegrace:1.3
 FULL_IMAGE_TAG = "$(PREFIX)$(IMAGE)"
 
 all: image push
