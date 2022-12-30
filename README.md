@@ -34,10 +34,10 @@ kubectl rollout status deployment/nodegrace
 
 ## Create builder instance
 ```
-docker buildx create --name mybuilder --use --bootstrap --platform linux/arm64,linux/arm/v8
+docker buildx create --name mybuilder --use --bootstrap --platform linux/amd64,linux/arm/v8
 ```
 
 ## Build docker image for linux/amd64 and linux/arm64
 ```
-docker buildx build --push --platform linux/arm64,linux/arm/v8 --tag nontster/nodegrace:1.4 .
+docker buildx build --push --platform linux/amd64,linux/arm/v8 --tag nontster/nodegrace:1.4 .
 ```
