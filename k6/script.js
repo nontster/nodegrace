@@ -10,7 +10,7 @@ export const options = {
 };
 
 export default function () {
-  const res = http.get('http://localhost:8080');
+  const res = http.get('http://localhost/');
   check(res, { 'status was 200': (r) => r.status == 200,
                'verify homepage text': (r) => r.body.includes('ok'),
         });
