@@ -26,4 +26,4 @@ kubectl rollout restart deployment/nodegrace
 kubectl rollout status deployment/nodegrace
 ```
 ### k6 load test result has no error
-![k6 load test result has no error](/assets/images/screenshot-k6-2022-12-30 203326.png)
+![k6 load test result has no error](https://github.com/nontster/nodegrace/blob/main/assets/images/screenshot-k6-2022-12-30%20203326.png?raw=true)
